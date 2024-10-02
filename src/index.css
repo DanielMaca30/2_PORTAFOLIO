@@ -12,6 +12,38 @@ body {
   color: #f5f5f5; /* Color de texto más claro */
 }
 
+/* Sección de habilidades */
+#skills {
+  padding: 2rem;
+  max-width: 1200px; /* Ajuste de ancho */
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo claro con transparencia */
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Sección de trabajos */
+#works {
+  padding: 2rem;
+  max-width: 1200px; /* Ajuste de ancho */
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo claro con transparencia */
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.works-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten a la fila */
+  justify-content: center; /* Centra los trabajos */
+}
+
+/* Estilo de los iconos de trabajos */
+.work-icon {
+  font-size: 40px; /* Tamaño del icono */
+  color: #1abc9c; /* Color del icono */
+}
+
 /* Header flotante */
 header {
   position: fixed;

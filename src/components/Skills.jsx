@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -29,20 +28,24 @@ const Skills = () => {
 
   return (
     <section id="skills">
-      <h2>Habilidades Blandas</h2>
-      <ul className="soft-skills">
-        {softSkills.map((skill, index) => (
-          <li key={index}>{skill}</li>
-        ))}
-      </ul>
-
-      <h2>Habilidades Duras</h2>
-      <Carousel className="carousel">
-        {hardSkills.map((skill, index) => (
-          <div key={index} className="skill-item">
-            <p>{skill}</p>
-          </div>
-        ))}
+      <h2>Habilidades</h2>
+      <Carousel showArrows={true} showThumbs={false} infiniteLoop={true}>
+        <div>
+          <h3>Habilidades Blandas</h3>
+          <ul className="soft-skills">
+            {softSkills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3>Habilidades Duras</h3>
+          <ul className="hard-skills">
+            {hardSkills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+        </div>
       </Carousel>
     </section>
   );
