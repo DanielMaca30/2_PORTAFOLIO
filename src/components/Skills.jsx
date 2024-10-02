@@ -1,42 +1,49 @@
+// src/components/Skills.jsx
 import React from 'react';
-import { FaCode, FaUserFriends } from 'react-icons/fa'; // Ejemplo de iconos
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Skills = () => {
+  const softSkills = [
+    "Comunicación efectiva",
+    "Creatividad",
+    "Pensamiento crítico",
+    "Gestión del tiempo",
+    "Adaptabilidad",
+    "Resolución de conflictos",
+    "Empatía",
+  ];
+
+  const hardSkills = [
+    "Desarrollo web",
+    "Edición de video",
+    "Diseño gráfico",
+    "Modelado 3D",
+    "Desarrollo de videojuegos",
+    "Animación 2D/3D",
+    "Edición de audio",
+    "Fotografía y videografía",
+    "Realidad aumentada y virtual (AR/VR)",
+    "Diseño de UX/UI",
+  ];
+
   return (
     <section id="skills">
-      <h2>Skills</h2>
-      <div className="skills-section">
-        <div className="skill">
-          <FaCode size={30} />
-          <h3>Habilidades Duras</h3>
-          <ul>
-            <li>Desarrollo web</li>
-            <li>Edición de video</li>
-            <li>Diseño gráfico</li>
-            <li>Modelado 3D</li>
-            <li>Desarrollo de videojuegos</li>
-            <li>Animación 2D/3D</li>
-            <li>Edición de audio</li>
-            <li>Fotografía y videografía</li>
-            <li>Realidad aumentada y virtual (AR/VR)</li>
-            <li>Diseño de UX/UI</li>
-          </ul>
-        </div>
-        <div className="skill">
-          <FaUserFriends size={30} />
-          <h3>Habilidades Blandas</h3>
-          <ul>
-            <li>Comunicación efectiva</li>
-            <li>Trabajo en equipo</li>
-            <li>Creatividad</li>
-            <li>Pensamiento crítico</li>
-            <li>Gestión del tiempo</li>
-            <li>Adaptabilidad</li>
-            <li>Resolución de conflictos</li>
-            <li>Empatia</li>
-          </ul>
-        </div>
-      </div>
+      <h2>Habilidades Blandas</h2>
+      <ul className="soft-skills">
+        {softSkills.map((skill, index) => (
+          <li key={index}>{skill}</li>
+        ))}
+      </ul>
+
+      <h2>Habilidades Duras</h2>
+      <Carousel className="carousel">
+        {hardSkills.map((skill, index) => (
+          <div key={index} className="skill-item">
+            <p>{skill}</p>
+          </div>
+        ))}
+      </Carousel>
     </section>
   );
 };

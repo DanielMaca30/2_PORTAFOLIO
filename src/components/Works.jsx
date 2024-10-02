@@ -1,31 +1,55 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { FaCode, FaPalette, FaMusic, FaFileAlt } from 'react-icons/fa'; // Ejemplos de íconos.
 
 const Works = () => {
+  const works = [
+    {
+      icon: <FaCode />,
+      title: "Clase 2: Implementacion de contenidos multimedia y formularios.",
+      repoLink: "https://github.com/DanielMaca30/clase-2",
+    },
+    {
+      icon: <FaPalette />,
+      title: "Clase 3: Exploracion de CSS y practica de cambio de resoluciones",
+      repoLink: "https://github.com/DanielMaca30/css-caracteristicas-jueves",
+    },
+    {
+      icon: <FaMusic />,
+      title: "Clase 4: Creacion de portafolio",
+      repoLink: "https://github.com/DanielMaca30/Portafolio",
+    },
+    {
+      icon: <FaFileAlt />,
+      title: "Clase 5: Clase virtual",
+      repoLink: "https://github.com/DanielMaca30/primer-proyecto-react",
+    },
+    {
+      icon: <FaFileAlt />,
+      title: "Clase 6: Desarrollo de contador",
+      repoLink: "https://github.com/DanielMaca30/9-septiembre/tree/main",
+    },
+    {
+      icon: <FaFileAlt />,
+      title: "Clase 7: Implementacion de componentes en React",
+      repoLink: "https://github.com/DanielMaca30/26_sept_video/tree/main",
+    },
+  ];
+
   return (
     <section id="works">
-      <h2>My Works</h2>
-      <Carousel className="carousel">
-  <div className="work-item">
-    <img src="https://via.placeholder.com/400x300" alt="Work 1" />
-    <div className="legend-container">
-      <p className="legend">Trabajo #1: sin nombre</p>
-      <a href="https://github.com/DanielMaca30/clase_1-jueves/tree/hotfix" target="_blank" rel="noopener noreferrer">
-        <button className="repo-button">Ver repositorio</button>
-      </a>
-    </div>
-  </div>
-  <div className="work-item">
-    <img src="https://via.placeholder.com/400x300" alt="Work 2" />
-    <div className="legend-container">
-      <p className="legend">Trabajo 2</p>
-      <a href="https://github.com/maca/trabajo2" target="_blank" rel="noopener noreferrer">
-        <button className="repo-button">Ver repositorio</button>
-      </a>
-    </div>
-  </div>
-</Carousel>
+      <h2>Trabajos</h2>
+      <div className="works-container">
+        {works.map((work, index) => (
+          <div 
+            key={index} 
+            className="work-item" 
+            onClick={() => window.open(work.repoLink, '_blank')}
+          >
+            <div className="work-icon">{work.icon}</div>
+            <p>{work.title}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
