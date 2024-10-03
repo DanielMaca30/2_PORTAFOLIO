@@ -107,8 +107,9 @@ p {
 
 /* Carousel */
 .carousel {
+  max-width: 100%; /* Asegura que el carrusel use todo el ancho en móviles */
   background-color: rgba(255, 255, 255, 0.05); /* Color consistente con el diseño */
-  padding: 1rem 0rem;
+  padding: 1rem 0;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para mejorar la estética */
   margin-bottom: 2rem; /* Margen inferior para separación */
@@ -148,27 +149,118 @@ p {
   background-color: #16a085; /* Color de fondo en hover */
 }
 
-/* Responsive Design */
+/* Estilos del menú hamburguesa */
+.hamburger {
+  display: none; /* Oculto en pantallas grandes */
+  background-color: #1abc9c;
+  padding: 1rem;
+  border-radius: 5px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 101;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
-  .about-me {
-    flex-direction: column;
-    text-align: center;
+  .header nav ul {
+    display: none;
+    flex-direction: column; /* Alinear elementos en columna */
+    position: absolute;
+    top: 60px; /* Colocar debajo del header */
+    left: 0;
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    background-color: #1c1c1c; /* Fondo oscuro */
+    padding: 1rem 0;
+    z-index: 100;
   }
 
-  .info-container {
-    padding-left: 0;
+  .header nav ul.show-menu {
+    display: flex;
+    justify-content: center; /* Centrar los elementos */
+    align-items: center;
+    gap: 20px; /* Añadir espaciado entre los elementos */
+    flex-direction: column; /* Alinear en columna */
+    transition: all 0.3s ease-in-out; /* Añadir una transición suave */
+  }
+
+  .header nav ul li {
+    margin: 10px 0; /* Espacio vertical entre los enlaces */
+  }
+
+  .header nav ul li a {
+    font-size: 1.2rem; /* Aumentar ligeramente el tamaño del texto */
+    color: #f5f5f5; /* Color claro */
+    padding: 10px 20px; /* Añadir padding a los enlaces */
+    text-decoration: none;
+  }
+
+  .header nav ul li a:hover {
+    background-color: #1abc9c; /* Fondo en hover */
+    border-radius: 5px;
+    color: white;
+  }
+
+  .hamburger {
+    display: block; /* Mostrar ícono de menú hamburguesa en pantallas pequeñas */
+  }
+}
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column; /* Alineación en columna */
+    text-align: center;
   }
 
   .profile-pic {
     margin-bottom: 1rem;
   }
 
-  section {
-    padding: 4rem 1rem; /* Ajustar el padding para pantallas pequeñas */
+  .info-container {
+    text-align: center; /* Centra el contenido de la información */
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+
+
+/* Ajustes para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+  .skills-list li {
+    width: 90%; /* Asegura que el panel no sea muy ancho */
+    padding: 0.4rem; /* Reducir el padding */
+  }
+}
+
+/* Ajustes para el deslizador de habilidades en pantallas pequeñas */
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 90%; /* Reducir el ancho del deslizador en móviles */
+    margin: 0 auto; /* Centrar el deslizador */
   }
 
-  .works-list {
-    flex-direction: column;
-    align-items: center; /* Alinear al centro en dispositivos más pequeños */
+  .carousel > div {
+    max-width: 100%; /* Asegura que cada panel no exceda el ancho disponible */
+    padding: 0.5rem; /* Ajusta el padding para que no ocupe demasiado espacio */
+  }
+
+  .skills-list li {
+    padding: 0.5rem; /* Reducir el padding en las habilidades */
+    border-radius: 5px; /* Redondear bordes */
+    width: 80%; /* Reducir el ancho de los paneles */
+    margin: 0 auto; /* Centrar los ítems */
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .works-list li {
+    width: 85%; /* Reducir aún más el ancho en móviles */
+    padding: 0.4rem; /* Ajustar el padding para que los botones sean más compactos */
+    font-size: 0.8rem; /* Reducir el tamaño de la letra */
+  }
+
+  .works-list li span {
+    font-size: 0.75rem; /* Reducir el tamaño de la letra dentro de los botones */
   }
 }

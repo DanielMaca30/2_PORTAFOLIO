@@ -61,6 +61,8 @@ ul {
 
 /* About Me */
 .about-me {
+  max-width: 90%; /* Hacer la sección más estrecha en móviles */
+  margin: 20px auto; /* Centrar la sección */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,6 +81,8 @@ ul {
 }
 
 .profile-pic {
+  width: 100px; /* Reducir tamaño de la imagen en móviles */
+  height: 100px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -86,6 +90,7 @@ ul {
 }
 
 .info-container {
+  font-size: 1.5rem; /* Reducir el tamaño del texto */
   flex: 2;
   text-align: left;
   padding-left: 2rem;
@@ -96,7 +101,14 @@ ul {
   color: #1abc9c;
 }
 
+.skills-list li, .works-list li {
+  font-size: 0.9rem; /* Reducir el tamaño del texto */
+  padding: 0.5rem; /* Ajustar el espacio entre elementos */
+  flex-direction: column; /* Apilar ítems en pantallas pequeñas */
+}
+
 .info-container p {
+  font-size: 1rem;
   font-size: 1.2rem;
   margin: 0.5rem 0;
 }
@@ -224,37 +236,29 @@ ul {
 .footer p {
   margin: 0;
   color: #7f8c8d;
-}
+}  
 
-/* Responsive Design */
+/* Ajustes del footer para pantallas pequeñas */
 @media (max-width: 768px) {
-  .works-list {
-    flex-direction: column;
-    align-items: center; /* Alinear al centro en dispositivos más pequeños */
-  }
-
-  .skills-list {
-    justify-content: center;
-  }
-  .carousel {
-    max-width: 100%; 
-    padding: 2rem 1rem;
-  }
-
-  .about-me {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .info-container {
-    padding-left: 0;
+    text-align: center; /* Centra el contenido de la información */
+  }
+  
+  .blue-text {
+    display: block; /* Asegura que se comporte como un bloque */
+    text-align: center; /* Centra el texto */
+    margin: 0.5rem 0; /* Añade margen para separación */
+  }
+  .footer {
+    padding: 1.5rem 0; /* Aumenta el padding */
+    font-size: 1rem; /* Asegura que el texto no sea demasiado pequeño */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
   }
 
-  .profile-pic {
-    margin-bottom: 1rem;
-  }
-
-  .skills-list {
-    justify-content: center;
+  .footer .social-icons {
+    display: flex; /* Asegura que los iconos estén en línea */
+    justify-content: space-around; /* Espacia los iconos uniformemente */
+    gap: 10px; /* Reducir la distancia entre iconos */
+    flex-direction: row; /* Mantenerlos en fila horizontal */
   }
 }
