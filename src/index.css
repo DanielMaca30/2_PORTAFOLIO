@@ -1,53 +1,25 @@
-/* Fondo degradado oscuro */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #2b2b2b, #3e3e3e); /* Degradado oscuro más sobrio */
+  background: #0c151d; /* Degradado oscuro más sobrio */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Cambiado a flex-start para evitar centrar verticalmente */
   color: #f5f5f5; /* Color de texto más claro */
 }
 
-/* Sección de habilidades */
-#skills {
-  padding: 2rem;
-  max-width: 1200px; /* Ajuste de ancho */
-  margin: auto;
-  background-color: rgba(255, 255, 255, 0.05); /* Fondo claro con transparencia */
-  border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-/* Sección de trabajos */
-#works {
-  padding: 2rem;
-  max-width: 1200px; /* Ajuste de ancho */
-  margin: auto;
-  background-color: rgba(255, 255, 255, 0.05); /* Fondo claro con transparencia */
-  border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.works-container {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten a la fila */
-  justify-content: center; /* Centra los trabajos */
-}
-
-/* Estilo de los iconos de trabajos */
-.work-icon {
-  font-size: 40px; /* Tamaño del icono */
-  color: #1abc9c; /* Color del icono */
+/* Works */
+.works {
+  padding: 2rem 1rem;
 }
 
 /* Header flotante */
 header {
   position: fixed;
-  top: 1rem;
+  top: 0; /* Mantener en la parte superior */
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(44, 62, 80, 0.95); /* Color oscuro con ligera transparencia */
@@ -82,7 +54,7 @@ header nav ul li a:hover {
 
 /* Ajuste de margen superior para evitar solapamiento */
 section {
-  padding: 7rem 1.5rem; /* Mayor padding superior para el header flotante */
+  padding: 8rem 1.5rem; /* Mayor padding superior para el header flotante */
   max-width: 1200px;
   width: 100%;
   margin: auto;
@@ -101,82 +73,111 @@ h2 {
   text-align: center;
   font-size: 2rem;
   margin: 1.5rem 0;
+  text-decoration: underline; /* Subrayado para decoración */
 }
 
-p, li, a {
+h1 {
+  text-align: center;
+  font-size: 2.5rem; /* Aumentar el tamaño del nombre */
+  margin: 10px 0;
+  color: #1abc9c; /* Color llamativo */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Sombra para mejorar visibilidad */
+}
+
+p {
+  text-align: justify; /* Justificar texto */
   color: #e0e0e0;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
+/* Carousel */
 .carousel {
-  max-width: 100%; /* Asegurar que el carousel no exceda el contenedor */
-  margin: 0 auto; /* Centrar el carousel */
-  padding: 1.5rem;
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  background-color: rgba(255, 255, 255, 0.05); /* Fondo traslúcido */
+  background-color: rgba(255, 255, 255, 0.05); /* Color consistente con el diseño */
+  padding: 1rem 0rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para mejorar la estética */
+  margin-bottom: 2rem; /* Margen inferior para separación */
+  max-width: 600px; /* Ajustar el ancho máximo del carrusel */
+  margin: 0 auto; /* Centrar el carrusel en la página */
 }
 
-.carousel .slide img {
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px; /* Bordes redondeados para las imágenes */
+.carousel > div {
+  max-width: 100%; /* Asegura que cada slide no exceda el ancho del carrusel */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar elementos dentro de cada slide */
 }
 
-.carousel .legend {
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 1rem;
+.carousel img {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
   border-radius: 10px;
 }
 
+/* Estilo del botón */
+.button {
+  background-color: #1abc9c; /* Color de fondo */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 10px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.button:hover {
+  background-color: #16a085; /* Color de fondo en hover */
+}
 
 /* Footer */
 footer {
-  background: rgba(44, 62, 80, 0.95);
-  color: #fff;
-  padding: 2rem 0;
   text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 90%; /* Ajustar el ancho para que no sea tan ancho */
-  margin: 2rem auto; /* Centrado del footer */
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  padding: 1rem;
+  background-color: #1c1c1c;
+  margin-top: auto; /* Asegura que el pie de página esté en la parte inferior */
 }
 
-.social-icons a {
-  margin: 0 1rem;
-  color: #1abc9c;
-  transition: transform 0.3s ease;
+footer h3 {
+  color: #f5f5f5;
 }
 
-.social-icons a:hover {
-  transform: scale(1.1); /* Efecto de hover suave */
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Estilos responsive */
-/* Ajustes responsive */
+footer p {
+  margin: 0;
+  color: #7f8c8d;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .carousel .slide img {
-    max-height: 200px; /* Ajustar el tamaño para pantallas pequeñas */
-  }
-  
-  header nav ul {
+  .about-me {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
-  .skills-section {
+  .info-container {
+    padding-left: 0;
+  }
+
+  .profile-pic {
+    margin-bottom: 1rem;
+  }
+
+  section {
+    padding: 4rem 1rem; /* Ajustar el padding para pantallas pequeñas */
+  }
+
+  .works-list {
     flex-direction: column;
-  }
-
-  .skill {
-    max-width: 90%;
-  }
-
-  .carousel .slide img {
-    max-height: 200px;
+    align-items: center; /* Alinear al centro en dispositivos más pequeños */
   }
 }

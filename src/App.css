@@ -1,42 +1,219 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  margin: 0.5rem 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+.header {
+  background-color: #1c1c1c;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header nav ul li a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header nav ul li a:hover {
+  color: #1abc9c;
+}
+
+/* About Me */
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin-top: 70px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  max-width: 600px; /* Limitar ancho para hacer más delgado */
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
+}
+
+.image-container {
+  flex: 1;
+  text-align: right;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #1abc9c;
+}
+
+.info-container {
+  flex: 2;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.info-container h1 {
+  font-size: 2rem;
+  color: #1abc9c;
+}
+
+.info-container p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.info-container ul {
+  margin-top: 1rem;
+}
+
+.info-container ul li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.works-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 2rem;
+}
+
+.works-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  cursor: pointer;
+  max-width: 600px; /* Limitar ancho para hacer más delgado */
+  margin-left: auto; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
+}
+
+.works-list li:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.works-list li span {
+  font-size: 1.2rem;
+}
+
+/* Estilo general para el contenedor del componente Skills */
+#skills {
+  background-color: #2c2c2c; /* Fondo oscuro para que combine con el resto */
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  max-width: 600px; /* Reducir el ancho máximo para hacerlo más angosto */
+  margin: 0 auto; /* Centra el componente en la página */
+}
+
+/* Skills List */
+.skills-list {
+  max-width: 80%; /* Ajustar el ancho de la lista de habilidades */
+  margin: auto; /* Centra la lista en la página */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.skills-list li {
+  padding: 1rem 0rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  border: 1px solid #1abc9c;
+  color: #fff;
+}
+
+/* Skills Container */
+.skills-container {
+  background-color: #2c2c2c;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1c1c1c;
+  margin-top: auto; /* Asegura que el pie de página esté en la parte inferior */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+footer h3 {
+  color: #f5f5f5;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer p {
+  margin: 0;
+  color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .works-list {
+    flex-direction: column;
+    align-items: center; /* Alinear al centro en dispositivos más pequeños */
   }
-  to {
-    transform: rotate(360deg);
+
+  .skills-list {
+    justify-content: center;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .carousel {
+    max-width: 100%; 
+    padding: 2rem 1rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.read-the-docs {
-  color: #888;
+  .info-container {
+    padding-left: 0;
+  }
+
+  .profile-pic {
+    margin-bottom: 1rem;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
 }
