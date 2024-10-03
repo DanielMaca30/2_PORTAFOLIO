@@ -3,7 +3,7 @@ import { FaInstagram, FaTiktok, FaSpotify, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <h3>¡Contactame!</h3>
       <div className="social-icons">
         <a href="https://www.instagram.com/daniel.maca_/"><FaInstagram size={30} /></a>
@@ -11,6 +11,7 @@ const Footer = () => {
         <a href="https://open.spotify.com/user/19jr1dks22avp7rxnjzsh9tn1?si=yAb8letER-6gplfET8PYEQ"><FaSpotify size={30} /></a>
         <a href="https://github.com/DanielMaca30?tab=repositories"><FaGithub size={30} /></a>
       </div>
+      <u>© {new Date().getFullYear()} Daniel Felipe Maca Cardona. Todos los derechos reservados.</u>
     </footer>
   );
 };

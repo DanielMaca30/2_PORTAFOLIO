@@ -12,13 +12,13 @@ const AboutMe = () => {
         />
       </div>
       <div className="info-container">
-        <h1>Daniel Maca</h1>
-        <p>@Maxcurria</p>
-        <ul>
-          <li>2+ años de experiencia</li>
-          <li>10+ apps creadas</li>
-          <li>700+ seguidores</li>
-        </ul>
+        <h3>Daniel Maca</h3> 
+        <p className="blue-text">@Maxcurria</p>
+        <div className="experience-line"> 
+          <li className='a'>+2 años de experiencia</li>
+          <li className='a'>+10 apps creadas</li>
+          <li className='a'>+700 seguidores</li>
+        </div>
       </div>
     </section>
   );

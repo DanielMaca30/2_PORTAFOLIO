@@ -1,4 +1,5 @@
 body {
+  font-family: 'Poppins', sans-serif; 
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
@@ -13,8 +14,13 @@ body {
 
 /* Works */
 .works {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem; /* Padding alrededor de la sección */
+  margin: 0 auto; /* Centrar la sección */
+  max-width: 600px; /* Limitar el ancho de la sección para hacerla más angosta */
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
+
 
 /* Header flotante */
 header {
@@ -28,6 +34,7 @@ header {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
   z-index: 100;
   width: auto; /* Ajuste de ancho automático */
+  margin: 0 auto;
 }
 
 header nav ul {
@@ -84,6 +91,13 @@ h1 {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Sombra para mejorar visibilidad */
 }
 
+u{
+  text-align: center; /* Justificar texto */
+  color: #6d6b6b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 p {
   text-align: justify; /* Justificar texto */
   color: #e0e0e0;
@@ -98,7 +112,7 @@ p {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para mejorar la estética */
   margin-bottom: 2rem; /* Margen inferior para separación */
-  max-width: 600px; /* Ajustar el ancho máximo del carrusel */
+  max-width: 635px; /* Ajustar el ancho máximo del carrusel */
   margin: 0 auto; /* Centrar el carrusel en la página */
 }
 
@@ -132,29 +146,6 @@ p {
 
 .button:hover {
   background-color: #16a085; /* Color de fondo en hover */
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #1c1c1c;
-  margin-top: auto; /* Asegura que el pie de página esté en la parte inferior */
-}
-
-footer h3 {
-  color: #f5f5f5;
-}
-
-footer .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-footer p {
-  margin: 0;
-  color: #7f8c8d;
 }
 
 /* Responsive Design */
