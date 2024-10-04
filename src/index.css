@@ -78,7 +78,7 @@ section, .skill, .carousel {
 
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 0rem;
   margin: 1.5rem 0;
   text-decoration: underline; /* Subrayado para decoración */
 }
@@ -175,6 +175,10 @@ p {
     z-index: 100;
   }
 
+h2{
+  font-size: 100%;
+}
+
   .header nav ul.show-menu {
     display: flex;
     justify-content: center; /* Centrar los elementos */
@@ -204,8 +208,7 @@ p {
   .hamburger {
     display: block; /* Mostrar ícono de menú hamburguesa en pantallas pequeñas */
   }
-}
-@media (max-width: 768px) {
+
   .about-me {
     flex-direction: column; /* Alineación en columna */
     text-align: center;
@@ -220,20 +223,7 @@ p {
     padding-left: 0;
     text-align: center;
   }
-}
 
-
-
-/* Ajustes para pantallas aún más pequeñas */
-@media (max-width: 480px) {
-  .skills-list li {
-    width: 90%; /* Asegura que el panel no sea muy ancho */
-    padding: 0.4rem; /* Reducir el padding */
-  }
-}
-
-/* Ajustes para el deslizador de habilidades en pantallas pequeñas */
-@media (max-width: 768px) {
   .carousel {
     max-width: 90%; /* Reducir el ancho del deslizador en móviles */
     margin: 0 auto; /* Centrar el deslizador */
@@ -252,25 +242,21 @@ p {
   }
 
   .works {
-    padding: 2rem 0rem; /* Padding alrededor de la sección */
+    padding: 2rem 7rem; /* Padding alrededor de la sección */
     margin: 0 auto; /* Centrar la sección */
-    max-width: 600px; /* Limitar el ancho de la sección para hacerla más angosta */
+    max-width: 200px; /* Limitar el ancho de la sección para hacerla más angosta */
     margin-bottom: 1%;
     margin-top: 1%;
   }
 
   .works-list li {
-    width: 85%; /* Reducir aún más el ancho en móviles */
+    width: 100%; /* Reducir aún más el ancho en móviles */
     padding: 0.4rem; /* Ajustar el padding para que los botones sean más compactos */
-    font-size: 0.8rem; /* Reducir el tamaño de la letra */
+    font-size: 0.2rem; /* Reducir el tamaño de la letra */
+    margin: 0 auto;
   }
 
   .works-list li span {
     font-size: 0.75rem; /* Reducir el tamaño de la letra dentro de los botones */
   }
-}
-
-/* Ajustes para pantallas muy pequeñas (móviles) */
-@media (max-width: 480px) {
-  
 }

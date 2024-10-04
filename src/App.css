@@ -250,15 +250,15 @@ ul {
     margin: 0.5rem 0; /* Añade margen para separación */
   }
   .footer {
-    padding: 1.5rem 0; /* Aumenta el padding */
+    padding: 1rem 0; /* Aumenta el padding */
     font-size: 1rem; /* Asegura que el texto no sea demasiado pequeño */
     width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    text-align: center; /* Para centrar todos los elementos */
   }
 
   .footer .social-icons {
     display: flex; /* Asegura que los iconos estén en línea */
-    justify-content: space-around; /* Espacia los iconos uniformemente */
-    gap: 10px; /* Reducir la distancia entre iconos */
+    gap: 30px; /* Reducir la distancia entre iconos */
     flex-direction: row; /* Mantenerlos en fila horizontal */
   }
 }
