@@ -237,28 +237,3 @@ ul {
   margin: 0;
   color: #7f8c8d;
 }  
-
-/* Ajustes del footer para pantallas pequeñas */
-@media (max-width: 768px) {
-  .info-container {
-    text-align: center; /* Centra el contenido de la información */
-  }
-  
-  .blue-text {
-    display: block; /* Asegura que se comporte como un bloque */
-    text-align: center; /* Centra el texto */
-    margin: 0.5rem 0; /* Añade margen para separación */
-  }
-  .footer {
-    padding: 1.5rem 0; /* Aumenta el padding */
-    font-size: 1rem; /* Asegura que el texto no sea demasiado pequeño */
-    width: 100%; /* Asegura que el footer ocupe todo el ancho */
-  }
-
-  .footer .social-icons {
-    display: flex; /* Asegura que los iconos estén en línea */
-    justify-content: space-around; /* Espacia los iconos uniformemente */
-    gap: 10px; /* Reducir la distancia entre iconos */
-    flex-direction: row; /* Mantenerlos en fila horizontal */
-  }
-}
