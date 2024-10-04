@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <header className="header">
       <nav>
-        <ul className={isMenuOpen ? 'show-menu' : ''}>
-          <li><Link to="about" smooth={true} duration={500}>About Me</Link></li>
-          <li><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
-          <li><Link to="works" smooth={true} duration={500}>Works</Link></li>
-          <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+        <ul className={menuOpen ? 'show-menu' : ''}>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#works">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
-        <div className="hamburger" onClick={toggleMenu}>☰</div>
+        <div className="hamburger" onClick={toggleMenu}>
+          &#9776;
+        </div>
       </nav>
     </header>
   );
